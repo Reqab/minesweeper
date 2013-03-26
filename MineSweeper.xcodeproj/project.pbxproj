@@ -13,6 +13,7 @@
 		7FC423041702591A00082FB1 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7FC423021702591A00082FB1 /* Credits.rtf */; };
 		7FC423071702591A00082FB1 /* MineSweeperAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC423061702591A00082FB1 /* MineSweeperAppDelegate.m */; };
 		7FC4230A1702591A00082FB1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FC423081702591A00082FB1 /* MainMenu.xib */; };
+		7FC42312170259C700082FB1 /* MineSweeperController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC42311170259C700082FB1 /* MineSweeperController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		7FC423051702591A00082FB1 /* MineSweeperAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineSweeperAppDelegate.h; sourceTree = "<group>"; };
 		7FC423061702591A00082FB1 /* MineSweeperAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineSweeperAppDelegate.m; sourceTree = "<group>"; };
 		7FC423091702591A00082FB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		7FC42310170259C700082FB1 /* MineSweeperController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineSweeperController.h; sourceTree = "<group>"; };
+		7FC42311170259C700082FB1 /* MineSweeperController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineSweeperController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,8 @@
 			children = (
 				7FC423051702591A00082FB1 /* MineSweeperAppDelegate.h */,
 				7FC423061702591A00082FB1 /* MineSweeperAppDelegate.m */,
+				7FC42310170259C700082FB1 /* MineSweeperController.h */,
+				7FC42311170259C700082FB1 /* MineSweeperController.m */,
 				7FC423081702591A00082FB1 /* MainMenu.xib */,
 				7FC422FA1702591A00082FB1 /* Supporting Files */,
 			);
@@ -169,6 +174,7 @@
 			files = (
 				7FC423001702591A00082FB1 /* main.m in Sources */,
 				7FC423071702591A00082FB1 /* MineSweeperAppDelegate.m in Sources */,
+				7FC42312170259C700082FB1 /* MineSweeperController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
