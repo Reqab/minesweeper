@@ -1,0 +1,311 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7FC422F41702591A00082FB1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC422F31702591A00082FB1 /* Cocoa.framework */; };
+		7FC422FE1702591A00082FB1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7FC422FC1702591A00082FB1 /* InfoPlist.strings */; };
+		7FC423001702591A00082FB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC422FF1702591A00082FB1 /* main.m */; };
+		7FC423041702591A00082FB1 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7FC423021702591A00082FB1 /* Credits.rtf */; };
+		7FC423071702591A00082FB1 /* MineSweeperAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC423061702591A00082FB1 /* MineSweeperAppDelegate.m */; };
+		7FC4230A1702591A00082FB1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FC423081702591A00082FB1 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7FC422F01702591A00082FB1 /* MineSweeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MineSweeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FC422F31702591A00082FB1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		7FC422F61702591A00082FB1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		7FC422F71702591A00082FB1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7FC422F81702591A00082FB1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7FC422FB1702591A00082FB1 /* MineSweeper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MineSweeper-Info.plist"; sourceTree = "<group>"; };
+		7FC422FD1702591A00082FB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7FC422FF1702591A00082FB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7FC423011702591A00082FB1 /* MineSweeper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MineSweeper-Prefix.pch"; sourceTree = "<group>"; };
+		7FC423031702591A00082FB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		7FC423051702591A00082FB1 /* MineSweeperAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineSweeperAppDelegate.h; sourceTree = "<group>"; };
+		7FC423061702591A00082FB1 /* MineSweeperAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineSweeperAppDelegate.m; sourceTree = "<group>"; };
+		7FC423091702591A00082FB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7FC422ED1702591A00082FB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FC422F41702591A00082FB1 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7FC422E71702591A00082FB1 = {
+			isa = PBXGroup;
+			children = (
+				7FC422F91702591A00082FB1 /* MineSweeper */,
+				7FC422F21702591A00082FB1 /* Frameworks */,
+				7FC422F11702591A00082FB1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7FC422F11702591A00082FB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7FC422F01702591A00082FB1 /* MineSweeper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7FC422F21702591A00082FB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FC422F31702591A00082FB1 /* Cocoa.framework */,
+				7FC422F51702591A00082FB1 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7FC422F51702591A00082FB1 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FC422F61702591A00082FB1 /* AppKit.framework */,
+				7FC422F71702591A00082FB1 /* CoreData.framework */,
+				7FC422F81702591A00082FB1 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		7FC422F91702591A00082FB1 /* MineSweeper */ = {
+			isa = PBXGroup;
+			children = (
+				7FC423051702591A00082FB1 /* MineSweeperAppDelegate.h */,
+				7FC423061702591A00082FB1 /* MineSweeperAppDelegate.m */,
+				7FC423081702591A00082FB1 /* MainMenu.xib */,
+				7FC422FA1702591A00082FB1 /* Supporting Files */,
+			);
+			path = MineSweeper;
+			sourceTree = "<group>";
+		};
+		7FC422FA1702591A00082FB1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7FC422FB1702591A00082FB1 /* MineSweeper-Info.plist */,
+				7FC422FC1702591A00082FB1 /* InfoPlist.strings */,
+				7FC422FF1702591A00082FB1 /* main.m */,
+				7FC423011702591A00082FB1 /* MineSweeper-Prefix.pch */,
+				7FC423021702591A00082FB1 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7FC422EF1702591A00082FB1 /* MineSweeper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FC4230D1702591A00082FB1 /* Build configuration list for PBXNativeTarget "MineSweeper" */;
+			buildPhases = (
+				7FC422EC1702591A00082FB1 /* Sources */,
+				7FC422ED1702591A00082FB1 /* Frameworks */,
+				7FC422EE1702591A00082FB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MineSweeper;
+			productName = MineSweeper;
+			productReference = 7FC422F01702591A00082FB1 /* MineSweeper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7FC422E81702591A00082FB1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MineSweeper;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = WSU;
+			};
+			buildConfigurationList = 7FC422EB1702591A00082FB1 /* Build configuration list for PBXProject "MineSweeper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7FC422E71702591A00082FB1;
+			productRefGroup = 7FC422F11702591A00082FB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7FC422EF1702591A00082FB1 /* MineSweeper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7FC422EE1702591A00082FB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FC422FE1702591A00082FB1 /* InfoPlist.strings in Resources */,
+				7FC423041702591A00082FB1 /* Credits.rtf in Resources */,
+				7FC4230A1702591A00082FB1 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7FC422EC1702591A00082FB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FC423001702591A00082FB1 /* main.m in Sources */,
+				7FC423071702591A00082FB1 /* MineSweeperAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7FC422FC1702591A00082FB1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7FC422FD1702591A00082FB1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7FC423021702591A00082FB1 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7FC423031702591A00082FB1 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		7FC423081702591A00082FB1 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7FC423091702591A00082FB1 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7FC4230B1702591A00082FB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7FC4230C1702591A00082FB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7FC4230E1702591A00082FB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MineSweeper/MineSweeper-Prefix.pch";
+				INFOPLIST_FILE = "MineSweeper/MineSweeper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7FC4230F1702591A00082FB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MineSweeper/MineSweeper-Prefix.pch";
+				INFOPLIST_FILE = "MineSweeper/MineSweeper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7FC422EB1702591A00082FB1 /* Build configuration list for PBXProject "MineSweeper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FC4230B1702591A00082FB1 /* Debug */,
+				7FC4230C1702591A00082FB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7FC4230D1702591A00082FB1 /* Build configuration list for PBXNativeTarget "MineSweeper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FC4230E1702591A00082FB1 /* Debug */,
+				7FC4230F1702591A00082FB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7FC422E81702591A00082FB1 /* Project object */;
+}
