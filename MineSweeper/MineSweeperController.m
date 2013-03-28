@@ -26,11 +26,16 @@
     const int numCols = (int) [self.mineFieldMatrix numberOfColumns];
     for (int r = 0; r < numRows; r++) {
         for(int c = 0; c < numCols; c++){
-            NSButtonCell *bcell = [self.mineFieldMatrix cellAtRow:r column:c]
+            NSButtonCell *bcell = [self.mineFieldMatrix cellAtRow:r column:c];
             [bcell setTitle:@""];
             [bcell setEnabled:YES];
         }
     }
 }
+
+-(IBAction)changeLevel:(NSPopUpButton *)sender{
+    
+}
+
 
 @end

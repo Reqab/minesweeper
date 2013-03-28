@@ -3433,6 +3433,54 @@
 					</object>
 					<int key="connectionID">532</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">newGame:</string>
+						<reference key="source" ref="80661250"/>
+						<reference key="destination" ref="245770328"/>
+					</object>
+					<int key="connectionID">714</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">changeLevel:</string>
+						<reference key="source" ref="80661250"/>
+						<reference key="destination" ref="90463187"/>
+					</object>
+					<int key="connectionID">715</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">MineFieldMatrix:</string>
+						<reference key="source" ref="80661250"/>
+						<reference key="destination" ref="320223959"/>
+					</object>
+					<int key="connectionID">716</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">mineFieldMatrix</string>
+						<reference key="source" ref="80661250"/>
+						<reference key="destination" ref="320223959"/>
+					</object>
+					<int key="connectionID">717</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">changeLevel</string>
+						<reference key="source" ref="80661250"/>
+						<reference key="destination" ref="90463187"/>
+					</object>
+					<int key="connectionID">718</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">scoreTextField</string>
+						<reference key="source" ref="80661250"/>
+						<reference key="destination" ref="1004761261"/>
+					</object>
+					<int key="connectionID">719</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -4006,7 +4054,7 @@
 								<float key="scoringTypeFloat">24</float>
 								<int key="contentType">3</int>
 							</object>
-							<object class="IBNSLayoutConstraint" id="679690396">
+							<object class="IBNSLayoutConstraint" id="572717384">
 								<reference key="firstItem" ref="245770328"/>
 								<int key="firstAttribute">11</int>
 								<int key="relation">0</int>
@@ -4070,7 +4118,7 @@
 								<float key="scoringTypeFloat">29</float>
 								<int key="contentType">3</int>
 							</object>
-							<object class="IBNSLayoutConstraint" id="729594599">
+							<object class="IBNSLayoutConstraint" id="623223981">
 								<reference key="firstItem" ref="923332999"/>
 								<int key="firstAttribute">5</int>
 								<int key="relation">0</int>
@@ -5443,12 +5491,12 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">712</int>
-						<reference key="object" ref="679690396"/>
+						<reference key="object" ref="572717384"/>
 						<reference key="parent" ref="439893737"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">713</int>
-						<reference key="object" ref="729594599"/>
+						<reference key="object" ref="623223981"/>
 						<reference key="parent" ref="439893737"/>
 					</object>
 				</array>
@@ -5521,11 +5569,11 @@
 					<reference ref="587661743"/>
 					<reference ref="847999372"/>
 					<reference ref="406351831"/>
-					<reference ref="729594599"/>
+					<reference ref="623223981"/>
 					<reference ref="623784794"/>
 					<reference ref="814738621"/>
 					<reference ref="678769569"/>
-					<reference ref="679690396"/>
+					<reference ref="572717384"/>
 					<reference ref="674710759"/>
 					<reference ref="661976364"/>
 					<reference ref="1032106549"/>
@@ -5610,7 +5658,6 @@
 				<string key="537.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<boolean value="NO" key="542.IBNSViewMetadataTranslatesAutoresizingMaskIntoConstraints"/>
 				<string key="542.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="542.userInterfaceItemIdentifier">MineField</string>
 				<string key="543.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="547.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="549.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -5772,7 +5819,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">713</int>
+			<int key="maxID">719</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -5798,6 +5845,25 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">MineSweeperController</string>
 					<string key="superclassName">NSObject</string>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="changeLevel">NSPopUpButton</string>
+						<string key="mineFieldMatrix">NSMatrix</string>
+						<string key="scoreTextField">NSTextField</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="changeLevel">
+							<string key="name">changeLevel</string>
+							<string key="candidateClassName">NSPopUpButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="mineFieldMatrix">
+							<string key="name">mineFieldMatrix</string>
+							<string key="candidateClassName">NSMatrix</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="scoreTextField">
+							<string key="name">scoreTextField</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
+					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/MineSweeperController.h</string>
