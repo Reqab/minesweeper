@@ -11,9 +11,10 @@
 @interface MineSweeperController : NSObject
 
 @property (weak) IBOutlet NSMatrix *mineFieldMatrix;
-
 @property (weak) IBOutlet NSPopUpButton *changeLevel;
-
 @property (weak) IBOutlet NSTextField *scoreTextField;
+-(IBAction)newGame:(id)sender;
+-(IBAction)chnageLevel:(id)sender;
+-(IBAction)mineFieldMatrix:(id)sender;
 
 @end

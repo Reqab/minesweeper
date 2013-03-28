@@ -3442,22 +3442,6 @@
 					<int key="connectionID">714</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">changeLevel:</string>
-						<reference key="source" ref="80661250"/>
-						<reference key="destination" ref="90463187"/>
-					</object>
-					<int key="connectionID">715</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">MineFieldMatrix:</string>
-						<reference key="source" ref="80661250"/>
-						<reference key="destination" ref="320223959"/>
-					</object>
-					<int key="connectionID">716</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">mineFieldMatrix</string>
 						<reference key="source" ref="80661250"/>
@@ -3480,6 +3464,22 @@
 						<reference key="destination" ref="1004761261"/>
 					</object>
 					<int key="connectionID">719</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">chnageLevel:</string>
+						<reference key="source" ref="80661250"/>
+						<reference key="destination" ref="90463187"/>
+					</object>
+					<int key="connectionID">720</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">mineFieldMatrix:</string>
+						<reference key="source" ref="80661250"/>
+						<reference key="destination" ref="320223959"/>
+					</object>
+					<int key="connectionID">721</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -4054,7 +4054,7 @@
 								<float key="scoringTypeFloat">24</float>
 								<int key="contentType">3</int>
 							</object>
-							<object class="IBNSLayoutConstraint" id="572717384">
+							<object class="IBNSLayoutConstraint" id="374633933">
 								<reference key="firstItem" ref="245770328"/>
 								<int key="firstAttribute">11</int>
 								<int key="relation">0</int>
@@ -4118,7 +4118,7 @@
 								<float key="scoringTypeFloat">29</float>
 								<int key="contentType">3</int>
 							</object>
-							<object class="IBNSLayoutConstraint" id="623223981">
+							<object class="IBNSLayoutConstraint" id="410391028">
 								<reference key="firstItem" ref="923332999"/>
 								<int key="firstAttribute">5</int>
 								<int key="relation">0</int>
@@ -5491,12 +5491,12 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">712</int>
-						<reference key="object" ref="572717384"/>
+						<reference key="object" ref="374633933"/>
 						<reference key="parent" ref="439893737"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">713</int>
-						<reference key="object" ref="623223981"/>
+						<reference key="object" ref="410391028"/>
 						<reference key="parent" ref="439893737"/>
 					</object>
 				</array>
@@ -5569,11 +5569,11 @@
 					<reference ref="587661743"/>
 					<reference ref="847999372"/>
 					<reference ref="406351831"/>
-					<reference ref="623223981"/>
+					<reference ref="410391028"/>
 					<reference ref="623784794"/>
 					<reference ref="814738621"/>
 					<reference ref="678769569"/>
-					<reference ref="572717384"/>
+					<reference ref="374633933"/>
 					<reference ref="674710759"/>
 					<reference ref="661976364"/>
 					<reference ref="1032106549"/>
@@ -5819,7 +5819,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">719</int>
+			<int key="maxID">721</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -5845,6 +5845,25 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">MineSweeperController</string>
 					<string key="superclassName">NSObject</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="chnageLevel:">id</string>
+						<string key="mineFieldMatrix:">id</string>
+						<string key="newGame:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="chnageLevel:">
+							<string key="name">chnageLevel:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="mineFieldMatrix:">
+							<string key="name">mineFieldMatrix:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="newGame:">
+							<string key="name">newGame:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="changeLevel">NSPopUpButton</string>
 						<string key="mineFieldMatrix">NSMatrix</string>
