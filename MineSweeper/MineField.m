@@ -1,0 +1,155 @@
+//
+//  MineField.m
+//  mineproto
+//
+//  Created by Wayne Cochran on 4/21/09.
+//  Copyright 2009 __MyCompanyName__. All rights reserved.
+//
+
+#import "MineField.h"
+
+
+@implementation MineField {
+    NSMutableArray *cells; // grid of cells
+}
+
+@synthesize numMines;
+@synthesize numExposedCells;
+@synthesize kablooey;
+
+
+-(id)initWithWidth:(int)w Height:(int)h Mines:(int)m {
+    self = [super init];
+    if (self != nil) {
+        int r, c;
+        cells = [[NSMutableArray alloc] initWithCapacity: h];
+        for (r = 0; r < h; r++) {
+            NSMutableArray *row = [[NSMutableArray alloc] initWithCapacity: w];
+            [cells addObject: row];
+            for (c = 0; c < w; c++) {
+                [row addObject: [[Cell alloc] init]];
+            }
+        }
+        numMines = m;
+        [self reset]; // place random mines and unexpose all cells
+    }
+    return self;
+}
+
+-(int)width {
+    return (int) [[cells objectAtIndex: 0] count];
+}
+
+-(int)height {
+    return (int) [cells count];
+}
+
+-(Cell*)cellAtRow:(int)r Col:(int)c {
+    return [[cells objectAtIndex: r] objectAtIndex: c];
+}
+
+-(void)reset {
+    int w = [self width], h = [self height];
+    int n = w*h;  // total cells left
+    int m = numMines; // total mines left to place
+    int r,c;
+    
+    numExposedCells = 0;
+    kablooey = NO;
+    
+    for (r = 0; r < h; r++) { // reset all cells
+        for (c = 0; c < w; c++) {
+            Cell *cell = [self cellAtRow: r Col: c];
+            cell.exposed = cell.marked = cell.hasMine = NO;
+            double p = (double) m / (double) n; // probability of placing mine here
+            double g = drand48();  // generate random number 0 <= g < 1
+            if (g < p) {
+                cell.hasMine = YES;
+                m--;
+            }
+            n--;
+        }
+    }
+    numMines -= m;  // just to be anal, m should be zero at this point
+    
+    for (r = 0; r < h; r++) { // compute surrounding mine counts
+        for (c = 0; c < w; c++) {
+            int i,j, count = 0;
+            Cell *cell = [self cellAtRow: r Col: c];
+            for (j = -1; j <= +1; j++) {
+                for (i = -1; i <= +1; i++) {
+                    if (i == 0 && j == 0) continue;
+                    int rr = r+j, cc = c+i;
+                    if (rr < 0 || rr >= h || cc < 0 || cc >= w) continue;
+                    Cell *neighbor = [self cellAtRow: rr Col: cc];
+                    if (neighbor.hasMine)
+                        count++;
+                }
+            }
+            cell.numSurroundingMines = count;
+        }
+    }
+}
+
+-(int)unexposedCells {
+    int w = [self width], h = [self height];
+    return w*h - numMines - numExposedCells;
+}
+
+//
+// return value
+//  -2 => no change (cell already exposed, controller shouldn't allow this)
+//  -1 => "BOOM" (new exposed cell contained mine).
+//  0 to 8 => cell safely exposed, number of neighboring mines returned
+//  When 0 returned, its neighbors are (recursively) exposed
+//        controller should rescan grid for exposed cells
+//
+-(int)exposeCellAtRow:(int)r Col:(int)c {
+    if (kablooey) return -2;
+    Cell *cell = [self cellAtRow: r Col: c];
+    if (cell.exposed) return -2;
+    cell.exposed = YES;
+    numExposedCells++;
+    if (cell.hasMine) {  // BOOM!
+        kablooey = YES;
+        return -1;
+    }
+    int n = cell.numSurroundingMines;
+    if (n == 0) {
+        int w = [self width], h = [self height];
+        BOOL changed;
+        do {
+            int rr, cc;
+            changed = NO;
+            for (rr = 0; rr < h; rr++)
+                for (cc = 0; cc < w; cc++)
+                     if ([self autoExposeCellAtRow:rr Col:cc])
+                        changed = YES;
+        } while (changed);
+    }
+    return n;
+}
+
+-(BOOL)autoExposeCellAtRow:(int)r Col:(int)c {
+    Cell *cell = [self cellAtRow: r Col: c];
+    if (!cell.exposed && !cell.hasMine) {
+        int w = [self width], h = [self height];
+        int i,j;
+        for (j = -1; j <= +1; j++) {
+            for (i = -1; i <= +1; i++) {
+                if (i == 0 && j == 0) continue;
+                int rr = r+j, cc = c+i;
+                if (rr < 0 || rr >= h || cc < 0 || cc >= w) continue;
+                Cell *neighbor = [self cellAtRow:rr Col:cc];
+                if (neighbor.exposed && neighbor.numSurroundingMines == 0) {
+                    cell.exposed = YES;
+                    numExposedCells++;
+                    return YES;
+                }
+            }
+        }                            
+    }
+    return NO;
+}
+
+@end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F2C3A071704F595007B3D6E /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C3A041704F595007B3D6E /* Cell.m */; };
+		7F2C3A081704F595007B3D6E /* MineField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2C3A061704F595007B3D6E /* MineField.m */; };
 		7FC422F41702591A00082FB1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC422F31702591A00082FB1 /* Cocoa.framework */; };
 		7FC422FE1702591A00082FB1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7FC422FC1702591A00082FB1 /* InfoPlist.strings */; };
 		7FC423001702591A00082FB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC422FF1702591A00082FB1 /* main.m */; };
@@ -17,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F2C3A031704F595007B3D6E /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		7F2C3A041704F595007B3D6E /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		7F2C3A051704F595007B3D6E /* MineField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineField.h; sourceTree = "<group>"; };
+		7F2C3A061704F595007B3D6E /* MineField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineField.m; sourceTree = "<group>"; };
 		7FC422F01702591A00082FB1 /* MineSweeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MineSweeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FC422F31702591A00082FB1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		7FC422F61702591A00082FB1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -90,6 +96,10 @@
 				7FC42310170259C700082FB1 /* MineSweeperController.h */,
 				7FC42311170259C700082FB1 /* MineSweeperController.m */,
 				7FC423081702591A00082FB1 /* MainMenu.xib */,
+				7F2C3A031704F595007B3D6E /* Cell.h */,
+				7F2C3A041704F595007B3D6E /* Cell.m */,
+				7F2C3A051704F595007B3D6E /* MineField.h */,
+				7F2C3A061704F595007B3D6E /* MineField.m */,
 				7FC422FA1702591A00082FB1 /* Supporting Files */,
 			);
 			path = MineSweeper;
@@ -175,6 +185,8 @@
 				7FC423001702591A00082FB1 /* main.m in Sources */,
 				7FC423071702591A00082FB1 /* MineSweeperAppDelegate.m in Sources */,
 				7FC42312170259C700082FB1 /* MineSweeperController.m in Sources */,
+				7F2C3A071704F595007B3D6E /* Cell.m in Sources */,
+				7F2C3A081704F595007B3D6E /* MineField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +322,7 @@
 				7FC4230F1702591A00082FB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
