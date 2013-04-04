@@ -37,5 +37,10 @@
     
 }
 
+-(IBAction)mineFieldMatrix:(id)sender{
+    long r = [sender selectedRow];
+    long c = [sender selectedColumn];
+}
+
 
 @end

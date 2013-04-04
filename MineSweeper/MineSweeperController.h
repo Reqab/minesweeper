@@ -7,14 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MineField.h"
 
 @interface MineSweeperController : NSObject
 
 @property (weak) IBOutlet NSMatrix *mineFieldMatrix;
 @property (weak) IBOutlet NSPopUpButton *changeLevel;
 @property (weak) IBOutlet NSTextField *scoreTextField;
+@property (unsafe_unretained) IBOutlet NSWindow *mainWindow;
+
 -(IBAction)newGame:(id)sender;
--(IBAction)chnageLevel:(id)sender;
+-(IBAction)changeLevel:(id)sender;
 -(IBAction)mineFieldMatrix:(id)sender;
 
 @end
