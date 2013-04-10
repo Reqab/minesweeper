@@ -14,11 +14,14 @@
 
 #define kBegginerNumMines 10
 
+
 -(void)awakeFromNib{
     const int numRows = (int) [self.mineFieldMatrix numberOfRows];
     const int numCols = (int) [self.mineFieldMatrix numberOfColumns];
     mineField = [[MineField alloc] initWithWidth:numRows Height:numCols Mines:kBegginerNumMines];
     [self.scoreTextField setIntegerValue:[mineField unexposedCells]];
+    //bombImage = [NSImage imageNamed:@"bomb"];
+    //flagImage = [NSImage imageNamed:@"flag"];
 }
 
 -(void)clearView{
