@@ -19,5 +19,6 @@
 -(IBAction)newGame:(id)sender;
 -(IBAction)changeLevel:(id)sender;
 -(IBAction)mineFieldMatrix:(id)sender;
+-(void)clearView;
 
 @end
