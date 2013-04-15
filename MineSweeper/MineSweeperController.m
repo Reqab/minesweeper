@@ -107,7 +107,8 @@
                     if(cell.exposed){
                         bcell = [self.mineFieldMatrix cellAtRow:j column:i];
                         clicked = [mineField exposeCellAtRow:j Col:i];
-                        [bcell setTitle:[NSString stringWithFormat:@"%d", cell.numSurroundingMines]];
+                        if(cell.numSurroundingMines)
+                            [bcell setTitle:[NSString stringWithFormat:@"%d", cell.numSurroundingMines]];
                         [bcell setEnabled:NO];
                         [bcell setState:1];
                     }
